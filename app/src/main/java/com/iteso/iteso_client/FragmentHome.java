@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iteso.iteso_client.beans.ItemProduct;
-import com.iteso.iteso_client.beans.ItemProductsResolver;
+import com.iteso.iteso_client.beans.ProductsContentResolver;
 import com.iteso.iteso_client.tools.Constant;
 
 import java.util.ArrayList;
@@ -48,7 +48,7 @@ public class FragmentHome extends Fragment {
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         products = new ArrayList<>();
-        products = ItemProductsResolver.getItemProductsFromCategory(getContext(), Constant.PRODUCTS_HOME);
+        products = ProductsContentResolver.getItemProductsFromCategory(getContext(), Constant.PRODUCTS_HOME);
         adapterProduct = new AdapterProduct(products, getActivity(), Constant.FRAGMENT_HOME);
         recyclerView.setAdapter(adapterProduct);
     }

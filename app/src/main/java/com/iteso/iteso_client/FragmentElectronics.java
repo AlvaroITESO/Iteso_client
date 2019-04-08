@@ -6,13 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.iteso.iteso_client.beans.ItemProduct;
-import com.iteso.iteso_client.beans.ItemProductsResolver;
+import com.iteso.iteso_client.beans.ProductsContentResolver;
 import com.iteso.iteso_client.tools.Constant;
 
 
@@ -50,7 +49,7 @@ public class FragmentElectronics extends Fragment {
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         products = new ArrayList<>();
-        products = ItemProductsResolver.getItemProductsFromCategory(getContext(), Constant.PRODUCTS_ELECTRONICS);
+        products = ProductsContentResolver.getItemProductsFromCategory(getContext(), Constant.PRODUCTS_ELECTRONICS);
         adapterProduct = new AdapterProduct(products, getActivity(), Constant.FRAGMENT_ELECTRONICS);
         recyclerView.setAdapter(adapterProduct);
 

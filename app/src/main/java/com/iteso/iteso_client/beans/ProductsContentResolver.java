@@ -11,7 +11,7 @@ import com.iteso.iteso_client.tools.Constant;
 
 import java.util.ArrayList;
 
-public class ItemProductsResolver {
+public class ProductsContentResolver {
 
     public static ArrayList<ItemProduct> getItemProductsFromCategory(Context context, int category){
         ArrayList<ItemProduct> products = new ArrayList<>();
